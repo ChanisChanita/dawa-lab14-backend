@@ -8,7 +8,12 @@ const app = express();
 
 // Middlewares
 app.use(cors({
-  origin: ['http://localhost:3000', 'https://*.vercel.app'],
+  origin: [
+    'http://localhost:3000',
+    'http://localhost:3002',
+    'https://dawa-lab14-frontend-git-main-chanitas-projects.vercel.app',
+    /\.vercel\.app$/
+  ],
   credentials: true
 }));
 app.use(express.json());
